@@ -1,0 +1,2 @@
+Este trabajo lanza al clúster lejeune el fichero file-cut.sh
+La salida son ficheros .fastqc con el mismo nombre, guardados en su directorio correspondiente
