@@ -16,9 +16,13 @@
 #SBATCH --mail-user=jesus.vicentem@um.es
 
 echo Este trabajo lanza al clúster lejeune el fichero file-cut.sh
-echo La salida son ficheros .fastqc con el mismo nombre
+echo La salida son ficheros .fastqc con el mismo nombre, guardados en 'su' directorio correspondiente
 
-./file-cut.sh 2 | parallel
+#Cortado obligatorio
+./file-cut.sh 1 | parallel
+
+#Cortado avanzado
+./file-cut.sh 2 | parallel 
 
 	
 
