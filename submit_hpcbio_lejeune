@@ -1,0 +1,29 @@
+#!/bin/bash
+# NOTE:
+# --cpus-per-task parameter controls the number of
+# cpus needed to run the current job.
+#
+# If your application runs sequentially, please set
+# --cpus-per-task=1
+# If you need to reserve the full node, please set
+# --cpus-per-task=26
+
+#SBATCH -p hpc-bio-lejeune
+#SBATCH --chdir=/home/alumno20/lab2
+#SBATCH -J lab2-file-cut
+#SBATCH --cpus-per-task=4
+#SBATCH --mail-type=NONE   # END/START/NONE
+#SBATCH --mail-user=jesus.vicentem@um.es
+
+echo Este trabajo lanza al clúster lejeune el fichero file-cut.sh
+echo La salida son ficheros .fastqc con el mismo nombre
+
+./file-cut.sh 2 | parallel
+
+	
+
+
+
+
+
+
